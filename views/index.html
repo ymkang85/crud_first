@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록</title>
+    <style>
+        table{
+            width:800px;
+            margin: 30px auto;
+        }
+        table, tr, td, th{
+            border-collapse: collapse;
+            border:1px solod #333;
+        }
+        th{
+            padding:10px 6px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>writer</th>
+                <th>wdate</th>
+                <th>수정</th>
+                <th>삭제</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{row.id}}</td>
+                <td>{{row.title}}</td>
+                <td>{{row.writer}}</td>
+                <td>{{row.nowdate}}</td>
+                <td><a href=edit/{{row.id}}>수정</a></td>
+                <td><a href=delete/{{row.id}}>삭제</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div style="text-align:right">
+        <a href="insert">글쓰기</a>
+    </div>
+</body>
+</html>

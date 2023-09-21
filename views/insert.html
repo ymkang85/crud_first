@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글등록창</title>
+</head>
+<body>
+    <h1>글쓰기 폼</h1>
+    <form action="/insert" method="post">
+        <tr>
+            <td>
+                <h3>title</h3>
+                <input type="text" name='title' style='width: 200px; height:30px;'>
+                <h5>writer</h5>
+                <input type="text" name="writer"style='width: 100px; height:50px;' >
+            </td>
+            <br>
+            <br>
+            <td>
+                <h3>content</h3>
+                <input type="text" name="content"style='width: 500px; height:200px;'>
+            </td>
+            <td><button type="submit">추가</button></td>
+        </tr>
+    </form>
+</body>
+</html>
